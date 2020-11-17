@@ -22,7 +22,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 通用设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","      " 定义<leader>键
+let mapleader = ";"      " 定义<leader>键
+set mouse=a              " 使用鼠标
 set nocompatible         " 设置不兼容原始vi模式
 filetype on              " 设置开启文件类型侦测
 filetype plugin on       " 设置加载对应文件类型的插件
@@ -39,6 +40,7 @@ set cursorline           " 高亮显示当前行
 set whichwrap+=<,>,h,l   " 设置光标键跨行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后面
+set clipboard=unnamed    " 共享剪切板
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
@@ -49,14 +51,14 @@ set cinoptions=g0,:0,N-s,(0    " 设置C/C++语言的具体缩进方式
 set smartindent          " 智能的选择对其方式
 filetype indent on       " 自适应不同语言的智能缩进
 set expandtab            " 将制表符扩展为空格
-set tabstop=4            " 设置编辑时制表符占用空格数
-set shiftwidth=4         " 设置格式化时制表符占用空格数
-set softtabstop=4        " 设置4个空格为制表符
+set tabstop=2            " 设置编辑时制表符占用空格数
+set shiftwidth=2         " 设置格式化时制表符占用空格数
+set softtabstop=2        " 设置2个空格为制表符
 set smarttab             " 在行和段开始处使用制表符
 set nowrap               " 禁止折行
 set backspace=2          " 使用回车键正常处理indent,eol,start等
 set sidescroll=10        " 设置向右滚动字符数
-set nofoldenable         " 禁用折叠代码
+"set nofoldenable         " 禁用折叠代码
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码补全
@@ -70,6 +72,7 @@ set completeopt-=preview " 补全时不显示窗口，只显示补全列表
 set hlsearch            " 高亮显示搜索结果
 set incsearch           " 开启实时搜索功能
 set ignorecase          " 搜索时大小写不敏感
+set showmatch           " 匹配括号
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 缓存设置
@@ -123,43 +126,33 @@ command! -nargs=1 -bar UnPlug call s:deregister(<args>)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
-Plug 'chxuan/cpp-mode'
-Plug 'chxuan/vim-edit'
-Plug 'chxuan/change-colorscheme'
-Plug 'chxuan/prepare-code'
-Plug 'chxuan/vim-buffer'
-Plug 'chxuan/vimplus-startify'
-Plug 'chxuan/tagbar'
-Plug 'Valloric/YouCompleteMe'
-Plug 'Yggdroot/LeaderF'
-Plug 'mileszs/ack.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'haya14busa/incsearch.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdtree'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'godlygeek/tabular'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-endwise'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/vim-slash'
-Plug 'junegunn/gv.vim'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-indent'
-Plug 'kana/vim-textobj-syntax'
-Plug 'kana/vim-textobj-function'
-Plug 'sgur/vim-textobj-parameter'
-Plug 'Shougo/echodoc.vim'
-Plug 'terryma/vim-smooth-scroll'
-Plug 'rhysd/clever-f.vim'
-Plug 'vim-scripts/indentpython.vim'
+Plug 'ludovicchabant/vim-gutentags'              " 自动生成ctags
+Plug 'chxuan/cpp-mode'                           " 生成函数
+Plug 'chxuan/change-colorscheme'                 " 切换主题
+Plug 'chxuan/prepare-code'                       " 生成预定义代码
+Plug 'chxuan/vim-buffer'                         " 切换Buffer
+Plug 'chxuan/vimplus-startify'                   " VimPlus开始页面
+Plug 'chxuan/tagbar'                             " 替换taglist
+Plug 'Valloric/YouCompleteMe'                    " 自动补全
+Plug 'Yggdroot/LeaderF'                          " 模糊搜索
+Plug 'haya14busa/incsearch.vim'                  " 模糊字符搜索
+Plug 'jiangmiao/auto-pairs'                      " 自动括号补全
+Plug 'scrooloose/nerdtree'                       " 文件树
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " NERDTree高亮
+Plug 'Xuyuanp/nerdtree-git-plugin'               " NERDTree git状态
+Plug 'godlygeek/tabular'                         " 代码注释对齐
+Plug 'tpope/vim-fugitive'                        " 集成git
+Plug 'tpope/vim-endwise'                         " if/end/endif/edfunction补全
+Plug 'octol/vim-cpp-enhanced-highlight'          " c++语法高亮
+Plug 'vim-airline/vim-airline'                   " 状态栏
+Plug 'vim-airline/vim-airline-themes'            " 状态栏主题
+Plug 'ryanoasis/vim-devicons'                    " 文件图标
+Plug 'junegunn/vim-slash'                        " 优化搜索，移动光标后清除高亮
+Plug 'junegunn/gv.vim'                           " git提交记录
+Plug 'Shougo/echodoc.vim'                        " 显示函数签名
+Plug 'terryma/vim-smooth-scroll'                 " 优化翻页
+Plug 'rhysd/clever-f.vim'                        " 强化f、F
+Plug 'vim-scripts/indentpython.vim'              " Python缩进
 
 " 加载自定义插件
 if filereadable(expand($HOME . '/.vimrc.custom.plugins'))
@@ -172,23 +165,17 @@ call plug#end()
 runtime macros/matchit.vim
 
 " 编辑vimrc相关配置文件
-nnoremap <leader>e :edit $MYVIMRC<cr>
-nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
-nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
-
-" 查看vimplus的help文件
-nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
-
-" 打开当前光标所在单词的vim帮助文档
-nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
+nnoremap <leader>vr :edit $MYVIMRC<cr>
+"nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
+"nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
 
 " 重新加载vimrc文件
 nnoremap <leader>s :source $MYVIMRC<cr>
 
 " 安装、更新、删除插件
-nnoremap <leader><leader>i :PlugInstall<cr>
-nnoremap <leader><leader>u :PlugUpdate<cr>
-nnoremap <leader><leader>c :PlugClean<cr>
+"nnoremap <leader><leader>i :PlugInstall<cr>
+"nnoremap <leader><leader>u :PlugUpdate<cr>
+"nnoremap <leader><leader>c :PlugClean<cr>
 
 " 分屏窗口移动
 nnoremap <c-j> <c-w>j
@@ -197,10 +184,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " 复制当前选中到系统剪切板
-vmap <leader><leader>y "+y
+"vmap <leader><leader>y "+y
 
 " 将系统剪切板内容粘贴到vim
-nnoremap <leader><leader>p "+p
+"nnoremap <leader><leader>p "+p
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -208,7 +195,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 " 主题设置
 set background=dark
 let g:onedark_termcolors=256
-colorscheme onedark
+colorscheme gruvbox
 
 " airline
 let g:airline_theme="onedark"
@@ -223,24 +210,24 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
 " cpp-mode
-nnoremap <leader>y :CopyCode<cr>
-nnoremap <leader>p :PasteCode<cr>
-nnoremap <leader>U :GoToFunImpl<cr>
-nnoremap <silent> <leader>a :Switch<cr>
+nnoremap <leader>y :CopyCode<cr>                  " 拷贝函数或变量
+nnoremap <leader>p :PasteCode<cr>                 " 生成函数实现或变量定义
+nnoremap <leader>U :GoToFunImpl<cr>               " 跳转到函数实现，替换ycm
+nnoremap <silent> <leader>a :Switch<cr>           " 切换类.h .cpp文件
 nnoremap <leader><leader>fp :FormatFunParam<cr>
 nnoremap <leader><leader>if :FormatIf<cr>
-nnoremap <leader><leader>t dd :GenTryCatch<cr>
-xnoremap <leader><leader>t d :GenTryCatch<cr>
+"nnoremap <leader><leader>t dd :GenTryCatch<cr>
+"xnoremap <leader><leader>t d :GenTryCatch<cr>
 
 " change-colorscheme
 nnoremap <silent> <F9> :PreviousColorScheme<cr>
 inoremap <silent> <F9> <esc> :PreviousColorScheme<cr>
 nnoremap <silent> <F10> :NextColorScheme<cr>
 inoremap <silent> <F10> <esc> :NextColorScheme<cr>
-nnoremap <silent> <F11> :RandomColorScheme<cr>
-inoremap <silent> <F11> <esc> :RandomColorScheme<cr>
-nnoremap <silent> <F12> :ShowColorScheme<cr>
-inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
+"nnoremap <silent> <F11> :RandomColorScheme<cr>
+"inoremap <silent> <F11> <esc> :RandomColorScheme<cr>
+"nnoremap <silent> <F12> :ShowColorScheme<cr>
+"inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 
 " prepare-code
 let g:prepare_code_plugin_path = expand($HOME . "/.vim/plugged/prepare-code")
@@ -251,12 +238,6 @@ nnoremap <silent> <c-n> :NextBuffer<cr>
 nnoremap <silent> <leader>d :CloseBuffer<cr>
 nnoremap <silent> <leader>D :BufOnly<cr>
 
-" vim-edit
-nnoremap Y :CopyText<cr>
-nnoremap D :DeleteText<cr>
-nnoremap C :ChangeText<cr>
-nnoremap <leader>r :ReplaceTo<space>
-
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
@@ -266,6 +247,9 @@ let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1 
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
+let NERDTreeShowHidden=1
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YCM
 " 如果不指定python解释器路径，ycm会自己搜索一个合适的(与编译ycm时使用的python版本匹配)
@@ -306,11 +290,6 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-" vim-easymotion
-let g:EasyMotion_smartcase = 1
-map <leader>w <Plug>(easymotion-bd-w)
-nmap <leader>w <Plug>(easymotion-overwin-w)
-
 " nerdtree-git-plugin
 let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ "Modified"  : "✹",
@@ -326,15 +305,27 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ }
 
 " LeaderF
-nnoremap <leader>f :LeaderfFile .<cr>
+" https://github.com/Yggdroot/LeaderF
+" C-R       = 切换模糊模式和正则表达式模式 
+" C-F       = 切换名字匹配和全路径匹配 
+" Tab       = 切换检索模式和选择模式
+" C-J/K     = 上下选择
+" C-X       = 横向分割打开
+" C-]       = 纵向分割打开
+" C-T       = 新tab中打开
+" 快捷键
+nmap <leader>ff :Leaderf file<CR>
+nmap <leader>ft :Leaderf tag<CR>
+nmap <leader>fb :Leaderf bufTag<CR>
+nmap <leader>fn :Leaderf function<CR>
+" 弹出式预览
+let g:Lf_PreviewInPopup=1
+" 忽略
 let g:Lf_WildIgnore = {
             \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
             \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
             \}
 let g:Lf_UseCache = 0
-
-" ack
-nnoremap <leader>F :Ack!<space>
 
 " echodoc.vim
 let g:echodoc_enable_at_startup = 1
@@ -354,9 +345,33 @@ nnoremap <leader>g :GV<cr>
 nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 
+" ctags
+set autochdir
+set tags=./.tags;,.tags
+"set tags+=~/.vim/.systags
+nmap <leader>n :tnext<CR>
+nmap <leader>p :tprevious<CR>
+
+" gutentags
+" https://github.com/ludovicchabant/vim-gutentags
+" gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project', '.idea', '.gitmodules']
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+" 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v']
+let g:gutentags_ctags_extra_args += ['-I __THROW -I __attribute_pure__ -I __nonnull -I __attribute_']
+" 检测 ~/.cache/tags 不存在就新建
+if !isdirectory(s:vim_tags)
+  silent! call mkdir(s:vim_tags, 'p')
+endif
+
 " 加载自定义配置
 if filereadable(expand($HOME . '/.vimrc.custom.config'))
     source $HOME/.vimrc.custom.config
 endif
-
-

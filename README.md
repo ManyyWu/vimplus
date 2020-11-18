@@ -122,8 +122,8 @@ An automatic configuration program for vim
 
 | 插件                                | 说明                                                                           |
 | -------                             | -----                                                                          |
+| [vim-gutentags][92]                 | 自动生成tags                                                                 |
 | [cpp-mode][58]                      | 提供生成函数实现、函数声明/实现跳转、.h .cpp切换等功能(I'm author:smile:)      |
-| [vim-edit][72]                      | 方便的文本编辑插件(I'm author:smile:)                                          |
 | [change-colorscheme][27]            | 随心所欲切换主题(I'm author:smile:)                                            |
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                              |
 | [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                                 |
@@ -138,13 +138,8 @@ An automatic configuration program for vim
 | [Airline][8]                        | 可以取代[powerline][9]的状态栏美化插件                                         |
 | [auto-pairs][10]                    | 自动补全引号、圆括号、花括号等                                                 |
 | [LeaderF][56]                       | 比[ctrlp][12]更强大的文件的模糊搜索工具                                        |
-| [ack][62]                           | 强大的文本搜索工具                                                             |
-| [vim-surround][16]                  | 自动增加、替换配对符的插件                                                     |
-| [vim-commentary][17]                | 快速注释代码插件                                                               |
-| [vim-repeat][18]                    | 重复上一次操作                                                                 |
 | [vim-endwise][19]                   | if/end/endif/endfunction补全                                                   |
 | [tabular][20]                       | 代码、注释、表格对齐                                                           |
-| [vim-easymotion][23]                | 强大的光标快速移动工具，强大到颠覆你的插件观                                   |
 | [incsearch.vim][24]                 | 模糊字符搜索插件                                                               |
 | [vim-fugitive][36]                  | 集成Git                                                                        |
 | [gv][64]                            | 显示git提交记录                                                                |
@@ -415,4 +410,4 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [89]: https://github.com/luguifang
   [90]: https://github.com/liyewen521
   [91]: https://github.com/xht19980305
-
+  [92]: https://github.com/ludovicchabant/vim-gutentags

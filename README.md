@@ -165,13 +165,9 @@ An automatic configuration program for vim
 | `<leader>o`         | 打开include文件                           |
 | `<leader>y`         | 拷贝函数声明                              |
 | `<leader>p`         | 生成函数实现                              |
-| `<leader>w`         | 单词跳转                                  |
-| `<leader>f`         | 搜索~目录下的文件                         |
-| `<leader>F`         | 搜索当前目录下的文本                      |
 | `<leader>g`         | 显示git仓库提交记录                       |
 | `<leader>G`         | 显示当前文件提交记录                      |
 | `<leader>gg`        | 显示当前文件在某个commit下的完整内容      |
-| `<leader>ff`        | 语法错误自动修复(FixIt)                   |
 | `<c-p>`             | 切换到上一个buffer                        |
 | `<c-n>`             | 切换到下一个buffer                        |
 | `<leader>d`         | 删除当前buffer                            |
@@ -182,22 +178,8 @@ An automatic configuration program for vim
 | `<F10>`             | 显示下一主题                              |
 | `<leader>l`         | 按竖线对齐                                |
 | `<leader>=`         | 按等号对齐                                |
-| `Ya`                | 复制行文本到字母a                         |
-| `Da`                | 剪切行文本到字母a                         |
-| `Ca`                | 改写行文本到字母a                         |
-| `rr`                | 替换文本                                  |
-| `<leader>r`         | 全局替换，目前只支持单个文件              |
-| `rev`               | 翻转当前光标下的单词或使用V模式选择的文本 |
-| `gcc`               | 注释代码                                  |
-| `gcap`              | 注释段落                                  |
-| `vif`               | 选中函数内容                              |
-| `dif`               | 删除函数内容                              |
-| `cif`               | 改写函数内容                              |
-| `vaf`               | 选中函数内容（包括函数名 花括号）         |
-| `daf`               | 删除函数内容（包括函数名 花括号）         |
-| `caf`               | 改写函数内容（包括函数名 花括号）         |
 | `fa`                | 查找字母a，然后再按f键查找下一个          |
-| `<leader>e`         | 快速编辑~/.vimrc文件                      |
+| `<leader>vr`        | 快速编辑~/.vimrc文件                      |
 | `<leader>s`         | 重新加载~/.vimrc文件                      |
 | `<leader>vp`        | 快速编辑~/.vimrc.custom.plugins文件       |
 | `<leader>vc`        | 快速编辑~/.vimrc.custom.config文件        |
@@ -255,95 +237,6 @@ An automatic configuration program for vim
 - **`怎么自定义文件头，比如说添加作者、创建时间？`**
 
     你可以修改[chxuan/prepare-code][67]插件来达到目的，可以参考[这里][77]。
-
-- **`安装vimplus在“[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o”等进度时出现编译报错`**
-
-    编译ycm需要消耗较大内存，建议内存大于1G，实在不行也可以开启linux swap分区。
-
-- **`以上没有我遇到的问题怎么办？`**
-
-    您可以通过上网找解决方法，或提[Issues][39]，也可以通过加QQ`787280310`、发邮件方式`787280310@qq.com`一起讨论解决方法。
-
-- **`vimplus用起来真的太棒了，怎么办？`**
-
-    那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
-
-
-## 贡献者
-
-> 有代码贡献或有好的建议，帮助vimplus发展的小伙伴
-
-<a href="https://github.com/chxuan" target="_blank" title="chxuan">
-<img src="https://github.com/chxuan.png?size=64" width="64" height="64" alt="chxuan">
-</a>
-<a href="https://github.com/dofy" target="_blank" title="dofy">
-<img src="https://github.com/dofy.png?size=64" width="64" height="64" alt="dofy">
-</a>
-<a href="https://github.com/urain39" target="_blank" title="urain39">
-<img src="https://github.com/urain39.png?size=64" width="64" height="64" alt="urain39">
-</a>
-<a href="https://github.com/freedomDR" target="_blank" title="freedomDR">
-<img src="https://github.com/freedomDR.png?size=64" width="64" height="64" alt="freedomDR">
-</a>
-<a href="https://github.com/starifly" target="_blank" title="starifly">
-<img src="https://github.com/starifly.png?size=64" width="64" height="64" alt="starifly">
-</a>
-<a href="https://github.com/Shaloc" target="_blank" title="Shaloc">
-<img src="https://github.com/Shaloc.png?size=64" width="64" height="64" alt="Shaloc">
-</a>
-<a href="https://github.com/jokerkeny" target="_blank" title="jokerkeny">
-<img src="https://github.com/jokerkeny.png?size=64" width="64" height="64" alt="jokerkeny">
-</a>
-<a href="https://github.com/xuthus5" target="_blank" title="xuthus5">
-<img src="https://github.com/xuthus5.png?size=64" width="64" height="64" alt="xuthus5">
-</a>
-<a href="https://github.com/zhoumengkang" target="_blank" title="zhoumengkang">
-<img src="https://github.com/zhoumengkang.png?size=64" width="64" height="64" alt="zhoumengkang">
-</a>
-<a href="https://github.com/tuberry" target="_blank" title="tuberry">
-<img src="https://github.com/tuberry.png?size=64" width="64" height="64" alt="tuberry">
-</a>
-<a href="https://github.com/wyg1997" target="_blank" title="wyg1997">
-<img src="https://github.com/wyg1997.png?size=64" width="64" height="64" alt="wyg1997">
-</a>
-<a href="https://github.com/happinesslijian" target="_blank" title="happinesslijian">
-<img src="https://github.com/happinesslijian.png?size=64" width="64" height="64" alt="happinesslijian">
-</a>
-<a href="https://github.com/wangling12" target="_blank" title="wangling12">
-<img src="https://github.com/wangling12.png?size=64" width="64" height="64" alt="wangling12">
-</a>
-<a href="https://github.com/ardinzh" target="_blank" title="ardinzh">
-<img src="https://github.com/ardinzh.png?size=64" width="64" height="64" alt="ardinzh">
-</a>
-<a href="https://github.com/BD7IWD" target="_blank" title="BD7IWD">
-<img src="https://github.com/BD7IWD.png?size=64" width="64" height="64" alt="BD7IWD">
-</a>
-
-
-## 支持开源:heart:
-
-> 有意愿献爱心的小伙伴，务必将github账号写入捐款备注哦，谢谢大家
-
-| wechat                                                                                                     | alipay                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
-
-| 序号  | 支持者             | RMB   | 时间       |
-| ----- | -------            | ----- | -----      |
-| 1     | [zhoumengkang][80] | ¥50   | 2019-09-28 |
-| 2     | [zhoumengkang][80] | ¥50   | 2019-09-29 |
-| 3     | [zibraque][85]     | ¥50   | 2019-11-25 |
-| 4     | [gfreewind][86]    | ¥20   | 2019-12-27 |
-| 5     | [wh656325437][88]  | ¥20   | 2020-07-02 |
-| 6     | [luguifang][89]    | ¥20   | 2020-07-12 |
-| 7     | [liyewen521][90]   | ¥20   | 2020-07-27 |
-| 8     | [xht19980305][91]  | ¥20   | 2020-08-14 |
-
-
-## vimplus:star:趋势图
-
-![Stargazers over time](https://starchart.cc/chxuan/vimplus.svg)
-
 
 ## License
 

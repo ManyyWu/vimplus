@@ -28,6 +28,8 @@ An automatic configuration program for vim
     cd ~/.vimplus
     ./install.sh
     
+注: apline用户请预先安装git,bash: apk add git bash  
+
 #### 设置Nerd Font
 
 为防止vimplus显示乱码，需设置mac终端字体为`Droid Sans Mono Nerd Font`。
@@ -60,8 +62,10 @@ An automatic configuration program for vim
 <td><a href="https://distrowatch.com/table.php?distribution=manjaro"><img src="https://distrowatch.com/images/yvzhuwbpy/manjaro.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=opensuse"><img src="https://distrowatch.com/images/yvzhuwbpy/opensuse.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=gentoo"><img src="https://distrowatch.com/images/yvzhuwbpy/gentoo.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=parrot"><img src="https://distrowatch.com/images/yvzhuwbpy/parrot.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=raspios"><img src="https://distrowatch.com/images/yvzhuwbpy/raspios.png"/></a><p align="center"></p></td>
 <td><a href="https://distrowatch.com/table.php?distribution=freebsd"><img src="https://distrowatch.com/images/yvzhuwbpy/freebsd.png"/></a><p align="center"></p></td>
+<td><a href="https://distrowatch.com/table.php?distribution=alpine"><img src="https://distrowatch.com/images/yvzhuwbpy/alpine.png"/></a><p align="center"></p></td>
 </tr>
 </table>
 
@@ -128,7 +132,7 @@ An automatic configuration program for vim
 | [prepare-code][67]                  | 新建文件时，生成预定义代码片段(I'm author:smile:)                              |
 | [vim-buffer][70]                    | vim缓存操作(I'm author:smile:)                                                 |
 | [vimplus-startify][66]              | vimplus开始页面(修改自[mhinz/vim-startify][25])                                |
-| [tagbar][74]                        | 使用[majutsushi/tagbar][13]的v2.3版本，[taglist][14]的替代品，显示类/方法/变量 |
+| [tagbar][13]                        | 使用[preservim/tagbar][13]的最新版本，[taglist][14]的替代品，显示类/方法/变量 |
 | [vim-plug][4]                       | 比[Vundle][54]下载更快的插件管理软件                                           |
 | [YouCompleteMe][5]                  | 史上最强大的基于语义的自动补全插件，支持C/C++、C#、Python、PHP等语言           |
 | [NerdTree][6]                       | 代码资源管理器                                                                 |
@@ -238,6 +242,98 @@ An automatic configuration program for vim
 
     你可以修改[chxuan/prepare-code][67]插件来达到目的，可以参考[这里][77]。
 
+- **`安装vimplus在“[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o”等进度时出现编译报错`**
+
+    编译ycm需要消耗较大内存，建议内存大于1G，实在不行也可以开启linux swap分区。
+
+- **`以上没有我遇到的问题怎么办？`**
+
+    您可以通过上网找解决方法，或提[Issues][39]，也可以通过加QQ`787280310`、发邮件方式`787280310@qq.com`一起讨论解决方法。
+
+- **`vimplus用起来真的太棒了，怎么办？`**
+
+    那就麻烦您打赏一颗:star::star:吧，给予我继续维护的动力。
+
+
+## 贡献者
+
+> 有代码贡献或有好的建议，帮助vimplus发展的小伙伴
+
+<a href="https://github.com/chxuan" target="_blank" title="chxuan">
+<img src="https://github.com/chxuan.png?size=64" width="64" height="64" alt="chxuan">
+</a>
+<a href="https://github.com/dofy" target="_blank" title="dofy">
+<img src="https://github.com/dofy.png?size=64" width="64" height="64" alt="dofy">
+</a>
+<a href="https://github.com/urain39" target="_blank" title="urain39">
+<img src="https://github.com/urain39.png?size=64" width="64" height="64" alt="urain39">
+</a>
+<a href="https://github.com/freedomDR" target="_blank" title="freedomDR">
+<img src="https://github.com/freedomDR.png?size=64" width="64" height="64" alt="freedomDR">
+</a>
+<a href="https://github.com/starifly" target="_blank" title="starifly">
+<img src="https://github.com/starifly.png?size=64" width="64" height="64" alt="starifly">
+</a>
+<a href="https://github.com/Shaloc" target="_blank" title="Shaloc">
+<img src="https://github.com/Shaloc.png?size=64" width="64" height="64" alt="Shaloc">
+</a>
+<a href="https://github.com/jokerkeny" target="_blank" title="jokerkeny">
+<img src="https://github.com/jokerkeny.png?size=64" width="64" height="64" alt="jokerkeny">
+</a>
+<a href="https://github.com/xuthus5" target="_blank" title="xuthus5">
+<img src="https://github.com/xuthus5.png?size=64" width="64" height="64" alt="xuthus5">
+</a>
+<a href="https://github.com/zhoumengkang" target="_blank" title="zhoumengkang">
+<img src="https://github.com/zhoumengkang.png?size=64" width="64" height="64" alt="zhoumengkang">
+</a>
+<a href="https://github.com/tuberry" target="_blank" title="tuberry">
+<img src="https://github.com/tuberry.png?size=64" width="64" height="64" alt="tuberry">
+</a>
+<a href="https://github.com/wyg1997" target="_blank" title="wyg1997">
+<img src="https://github.com/wyg1997.png?size=64" width="64" height="64" alt="wyg1997">
+</a>
+<a href="https://github.com/happinesslijian" target="_blank" title="happinesslijian">
+<img src="https://github.com/happinesslijian.png?size=64" width="64" height="64" alt="happinesslijian">
+</a>
+<a href="https://github.com/wangling12" target="_blank" title="wangling12">
+<img src="https://github.com/wangling12.png?size=64" width="64" height="64" alt="wangling12">
+</a>
+<a href="https://github.com/ardinzh" target="_blank" title="ardinzh">
+<img src="https://github.com/ardinzh.png?size=64" width="64" height="64" alt="ardinzh">
+</a>
+<a href="https://github.com/BD7IWD" target="_blank" title="BD7IWD">
+<img src="https://github.com/BD7IWD.png?size=64" width="64" height="64" alt="BD7IWD">
+</a>
+<a href="https://github.com/Ro0tk1t" target="_blank" title="Ro0tk1t">
+<img src="https://github.com/Ro0tk1t.png?size=64" width="64" height="64" alt="Ro0tk1t">
+</a>
+
+
+## 支持开源:heart:
+
+> 有意愿献爱心的小伙伴，务必将github账号写入捐款备注哦，谢谢大家
+
+| wechat                                                                                                     | alipay                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/wechat.png" height="150" width="150" /></a> | <a href='#支持开源'><img src="https://github.com/chxuan/vimplus/blob/master/screenshots/alipay.png" height="150" width="150" /></a> |
+
+| 序号  | 支持者             | RMB   | 时间       |
+| ----- | -------            | ----- | -----      |
+| 1     | [zhoumengkang][80] | ¥50   | 2019-09-28 |
+| 2     | [zhoumengkang][80] | ¥50   | 2019-09-29 |
+| 3     | [zibraque][85]     | ¥50   | 2019-11-25 |
+| 4     | [gfreewind][86]    | ¥20   | 2019-12-27 |
+| 5     | [wh656325437][88]  | ¥20   | 2020-07-02 |
+| 6     | [luguifang][89]    | ¥20   | 2020-07-12 |
+| 7     | [liyewen521][90]   | ¥20   | 2020-07-27 |
+| 8     | [xht19980305][91]  | ¥20   | 2020-08-14 |
+
+
+## vimplus:star:趋势图
+
+![Stargazers over time](https://starchart.cc/chxuan/vimplus.svg)
+
+
 ## License
 
 This software is licensed under the [MIT license][75]. © 2016 chxuan
@@ -248,12 +344,12 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [3]: https://brew.sh/
   [4]: https://github.com/junegunn/vim-plug
   [5]: https://github.com/Valloric/YouCompleteMe
-  [6]: https://github.com/scrooloose/nerdtree
+  [6]: https://github.com/preservim/nerdtree
   [8]: https://github.com/vim-airline/vim-airline
   [9]: https://github.com/powerline/powerline
   [10]: https://github.com/jiangmiao/auto-pairs
   [12]: https://github.com/ctrlpvim/ctrlp.vim
-  [13]: https://github.com/majutsushi/tagbar
+  [13]: https://github.com/preservim/tagbar
   [14]: https://github.com/vim-scripts/taglist.vim
   [15]: https://github.com/ryanoasis/vim-devicons
   [16]: https://github.com/tpope/vim-surround
@@ -285,7 +381,6 @@ This software is licensed under the [MIT license][75]. © 2016 chxuan
   [68]: https://github.com/rhysd/clever-f.vim
   [70]: https://github.com/chxuan/vim-buffer
   [72]: https://github.com/chxuan/vim-edit
-  [74]: https://github.com/chxuan/tagbar
   [75]: https://github.com/chxuan/vimplus/blob/master/LICENSE
   [76]: https://blog.csdn.net/wang73ying/article/details/82491993
   [77]: https://blog.csdn.net/liuyangbo121/article/details/82971736

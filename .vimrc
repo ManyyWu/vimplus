@@ -128,20 +128,26 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ludovicchabant/vim-gutentags'              " 自动生成ctags
 Plug 'chxuan/cpp-mode'                           " 生成函数
+"Plug 'chxuan/vim-edit'
 Plug 'chxuan/change-colorscheme'                 " 切换主题
 Plug 'chxuan/prepare-code'                       " 生成预定义代码
 Plug 'chxuan/vim-buffer'                         " 切换Buffer
 Plug 'chxuan/vimplus-startify'                   " VimPlus开始页面
-Plug 'chxuan/tagbar'                             " 替换taglist
+Plug 'preservim/tagbar'                          " 替换taglist
 Plug 'Valloric/YouCompleteMe'                    " 自动补全
 Plug 'Yggdroot/LeaderF'                          " 模糊搜索
+"Plug 'mileszs/ack.vim'
+"Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'                  " 模糊字符搜索
 Plug 'jiangmiao/auto-pairs'                      " 自动括号补全
-Plug 'scrooloose/nerdtree'                       " 文件树
+Plug 'preservim/nerdtree'                        " 文件树
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " NERDTree高亮
 Plug 'Xuyuanp/nerdtree-git-plugin'               " NERDTree git状态
 Plug 'godlygeek/tabular'                         " 代码注释对齐
 Plug 'tpope/vim-fugitive'                        " 集成git
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'                         " if/end/endif/edfunction补全
 Plug 'octol/vim-cpp-enhanced-highlight'          " c++语法高亮
 Plug 'vim-airline/vim-airline'                   " 状态栏
@@ -149,6 +155,11 @@ Plug 'vim-airline/vim-airline-themes'            " 状态栏主题
 Plug 'ryanoasis/vim-devicons'                    " 文件图标
 Plug 'junegunn/vim-slash'                        " 优化搜索，移动光标后清除高亮
 Plug 'junegunn/gv.vim'                           " git提交记录
+"Plug 'kana/vim-textobj-user'
+"Plug 'kana/vim-textobj-indent'
+"Plug 'kana/vim-textobj-syntax'
+"Plug 'kana/vim-textobj-function'
+"Plug 'sgur/vim-textobj-parameter'
 Plug 'Shougo/echodoc.vim'                        " 显示函数签名
 Plug 'terryma/vim-smooth-scroll'                 " 优化翻页
 Plug 'rhysd/clever-f.vim'                        " 强化f、F

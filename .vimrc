@@ -360,8 +360,8 @@ nnoremap <leader>gg :GV?<cr>
 set autochdir
 set tags=./.tags;,.tags
 "set tags+=~/.vim/.systags
-nmap <leader>n :tnext<CR>
-nmap <leader>p :tprevious<CR>
+nmap <leader>N :tnext<CR>
+nmap <leader>P :tprevious<CR>
 
 " gutentags
 " https://github.com/ludovicchabant/vim-gutentags

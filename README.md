@@ -256,7 +256,7 @@ An automatic configuration program for vim
     
 - **`YCM error. The ycmd server SHUT DOWN`**
 
-    $cd ~/.vim/plugged/youcompleteme  
+    $cd ~/.vim/plugged/YouCompleteMe  
     $python3 install.py
 
 
